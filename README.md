@@ -9,11 +9,16 @@
         | &nbsp&nbsp 🌐 <a href="https://showlab.github.io/showui-pi/">Project Page</a> &nbsp&nbsp
 </p>
 
+> [**ShowUI-π: Flow-based Generative Models as GUI Dexterous Hands**](https://arxiv.org/abs/2512.24965)<br>
+> Siyuan Hu†, Kevin Qinghong Lin†, Mike Zheng Shou*<br>
+> <br>Show Lab @ National University of Singapore<br>
+> † Equal contribution &nbsp; * Corresponding author<br>
+
+## 🔥 Update
+- [x] [2026.1.10] Release code and project page.
+
 ## Demo
-
-
 https://github.com/user-attachments/assets/d033cbf3-e577-4f47-9605-9974a7cefcd7
-
 
 ## Overview
 
