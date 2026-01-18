@@ -7,6 +7,7 @@
 <p align="center">
         &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2512.24965">Paper</a> &nbsp&nbsp
         | &nbsp&nbsp 🌐 <a href="https://showlab.github.io/showui-pi/">Project Page</a> &nbsp&nbsp
+  | &nbsp&nbsp💬 <a href="https://x.com/HuggingPapers/status/2012559851235197024">X (Twitter)</a>&nbsp&nbsp
 </p>
 
 > [**ShowUI-π: Flow-based Generative Models as GUI Dexterous Hands**](https://arxiv.org/abs/2512.24965)<br>
@@ -29,7 +30,7 @@ ShowUI-π is a 450M flow-based vision-language-action model that treats GUI acti
 If you find our work helpful, please kindly consider citing our paper.
 
 ```bibtex
-@misc{hu2025showuipi,
+@misc{showuipi,
   title={ShowUI-$\\pi$: Flow-based Generative Models as GUI Dexterous Hands},
   author={Siyuan Hu and Kevin Qinghong Lin and Mike Zheng Shou},
   year={2025},
