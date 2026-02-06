@@ -1,8 +1,8 @@
 <h1 align="center">ShowUI-π: Flow-based Generative Models as GUI Dexterous Hands</h1>
 
-<!-- <p align="center">
+<p align="center">
   <i align="center">Unified discrete-continuous actions for free-form drag computer use.</i>
-</p> -->
+</p>
 
 <p align="center">
         &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2512.24965">Paper</a> &nbsp&nbsp
@@ -25,7 +25,44 @@ https://github.com/user-attachments/assets/d033cbf3-e577-4f47-9605-9974a7cefcd7
 
 ## Overview
 
-ShowUI-π is a 450M flow-based vision-language-action model that treats GUI actions as continuous trajectories, generating smooth clicks and drags directly from screen observations. It unifies discrete and continuous actions, enabling precise drawing, rotation, sorting, and captcha solving without tokenized coordinates.
+ShowUI-π is a 450M flow-based vision-language-action (VLA) model for GUI control. Given a screen observation and a natural language instruction, it generates continuous cursor trajectories — producing smooth clicks and drags directly in pixel space without tokenized coordinates.
+
+The key insight is a unified action representation: both clicks and drags are modeled as cursor waypoint sequences paired with mouse button states (pressed/released). This allows the model to handle discrete click actions and continuous drag operations within a single framework, using flow matching to generate temporally coherent trajectories.
+
+This design enables tasks that require fine-grained spatial control, such as freehand drawing, object rotation, drag-to-sort, slider adjustment, and captcha solving — capabilities that are difficult or impossible for conventional click-only GUI agents.
+
+## Highlights
+
+- **Continuous GUI Control** — Flow matching generates smooth, temporally coherent cursor trajectories in continuous pixel space, going beyond discrete click-only actions.
+- **Unified Action Representation** — Clicks and drags are both represented as cursor waypoint sequences with mouse states, eliminating the need for separate action heads.
+- **Parameter Efficient** — At 450M parameters, ShowUI-π outperforms 7B+ models on drag-based GUI tasks while remaining lightweight and efficient.
+- **ScreenDrag Dataset** — A new benchmark of 505 real-world drag tasks with over 20K trajectories across 5 application domains.
+
+## ScreenDrag Dataset
+
+[ScreenDrag](https://huggingface.co/datasets/h-siyuan/ScreenDrag) is a dataset of real-world screen drag tasks collected to train and evaluate continuous GUI control. It contains 505 tasks with over 20K cursor trajectories, each annotated with full waypoint sequences and mouse button states.
+
+The dataset covers 5 application domains:
+- **PowerPoint** — slide editing, object manipulation, shape drawing
+- **OS / File Manager** — drag-to-select, file sorting, window resizing
+- **Adobe Premiere Pro** — timeline editing, clip rearrangement
+- **Captcha** — slider and puzzle-piece drag verification
+- **Handwriting** — freehand character drawing and annotation
+
+## Getting Started
+
+```bash
+git clone https://github.com/showlab/ShowUI-Pi.git
+cd ShowUI-Pi
+pip install -e .
+```
+
+> Detailed installation, training, and inference instructions are coming soon.
+
+## Acknowledgements
+
+- [LeRobot](https://github.com/huggingface/lerobot) (Hugging Face) — ShowUI-π builds on the LeRobot codebase for flow-based policy learning.
+- [ShowUI](https://github.com/showlab/ShowUI) — the predecessor project for vision-language GUI understanding.
 
 ## 🎓 BibTeX
 
